@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#A6D0DD"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/ivLogoRepeat"
+        android:layout_width="280dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <LinearLayout
+        android:id="@+id/llTrForm"
+        android:layout_marginTop="30dp"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogoRepeat">
+
+        <TextView
+            android:id="@+id/tvTrUsage1Repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="cumle1"
+            android:textAlignment="center"
+            android:textColor="#703421"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTrUsage2Repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="cumle2"
+            android:textAlignment="center"
+            android:textColor="#703421"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTrUsage3Repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="cumle3"
+            android:textAlignment="center"
+            android:textColor="#703421"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvTrWordRepeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="Kelime"
+            android:textAlignment="center"
+            android:textColor="#703421"
+            android:textSize="18sp" />
+
+        <EditText
+            android:id="@+id/etEngWordRepeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Kelime:"
+            android:inputType="textPersonName"
+            tools:ignore="TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/llEngForm"
+        android:layout_marginTop="20dp"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCheckAnswer">
+
+        <TextView
+            android:id="@+id/tvEngUsage1Repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="sentence1"
+            android:textAlignment="center"
+            android:textColor="#703421"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvEngUsage2Repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="sentence2"
+            android:textAlignment="center"
+            android:textColor="#703421"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvEngUsage3Repeat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:text="sentence3"
+            android:textAlignment="center"
+            android:textColor="#703421"
+            android:textSize="18sp" />
+
+
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnCheckAnswer"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_quest"
+        android:onClick="clickCheckAnswer"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/llTrForm" />
+
+    <TextView
+        android:id="@+id/tvQuestCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kart: 11"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCorrecntCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Doru Cevap: 11"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/tvWrongCount"
+        app:layout_constraintStart_toEndOf="@+id/tvQuestCount"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWrongCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:text="Yanlış Cevap: 11"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

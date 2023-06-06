@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#7BC1D6"
+    android:layout_width="360dp"
+    android:layout_height="620dp">
+
+
+    <LinearLayout
+        android:id="@+id/llHeaderCardAddList"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="horizontal"
+        android:background="#48B1D1"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <TextView
+            android:id="@+id/tvHeaderCardAddList"
+            android:layout_marginTop="12dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="Kartlar"
+            android:textAlignment="textStart"
+            android:textColor="#FF5722"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/btnCloseCardAddList"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/btn_x_bg"
+            android:onClick="clickCategory"
+            tools:ignore="HardcodedText,SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCardAddList"
+        android:layout_margin="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="490dp"
+        app:layout_constraintTop_toBottomOf="@+id/llHeaderCardAddList"
+        tools:layout_editor_absoluteX="30dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:id="@+id/llFooterCardAddList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="#48B1D1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        tools:layout_editor_absoluteX="0dp">
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/tvSaveCardAddList"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="Kaydet"
+            android:textAlignment="center"
+            android:textColor="#FF5722"
+            android:textSize="22sp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/tvExitCardAddList"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_weight="1"
+            android:text="İptal"
+            android:textAlignment="center"
+            android:textColor="#FF5722"
+            android:textSize="22sp"/>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

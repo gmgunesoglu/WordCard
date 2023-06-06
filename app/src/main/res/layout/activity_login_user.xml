@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A6D0DD"
+    tools:context=".LoginUserActivity">
+
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="280dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="60dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo">
+
+
+        <EditText
+            android:id="@+id/etUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Kullanıcı Adınızı Girin:"
+            android:inputType="textPersonName"
+            tools:ignore="TouchTargetSizeCheck"
+            android:textSize="22sp"
+            android:importantForAutofill="no" />
+
+        <EditText
+            android:id="@+id/etPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:ems="10"
+            android:hint="Şifrenizi Girin:"
+            android:inputType="textPersonName|textPassword"
+            tools:ignore="TouchTargetSizeCheck"
+            android:textSize="22sp"
+            android:autofillHints="" />
+
+        <CheckBox
+            android:id="@+id/cbSave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Giriş Bilgilerimi Kaydet"
+            android:textSize="20sp"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="btnLoginClick"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_giris_yap_bg"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnCreateUser"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:onClick="btnCreateUserClick"
+            android:background="@drawable/btn_yeni_kullanici_bg"
+            tools:ignore="HardcodedText" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

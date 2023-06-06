@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A6D0DD"
+    tools:context=".UserActivity">
+
+
+    <ImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="280dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logo" />
+
+    <LinearLayout
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ivLogo">
+
+        <Button
+            android:id="@+id/btnStatistic"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_istatistik_bg"
+            android:onClick="clickStatistic"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnCategory"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_kategoriler_bg"
+            android:onClick="clickCategory"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnCard"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_kartlar_bg"
+            android:onClick="clickCard"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnRepeatWord"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/btn_kelime_tekrar_bg"
+            android:onClick="clickRepeat"
+            tools:ignore="HardcodedText" />
+
+        <Button
+            android:id="@+id/btnLogout"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_cikis_yap_bg"
+            android:onClick="clickLogout"
+            tools:ignore="HardcodedText" />
+
+    </LinearLayout>
+
+
+    <!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/constraintLayout"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        tools:ignore="MissingConstraints"-->
+<!--        tools:layout_editor_absoluteX="1dp"-->
+<!--        tools:layout_editor_absoluteY="1dp">-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/ibtnOptions"-->
+<!--            android:layout_width="70dp"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:layout_weight="1"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:srcCompat="@drawable/options"-->
+<!--            tools:ignore="SpeakableTextPresentCheck"-->
+<!--            tools:layout_editor_absoluteY="0dp" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tvHeader"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="FirstName LastName"-->
+<!--            android:textSize="26sp"-->
+<!--            app:layout_constraintBottom_toBottomOf="parent"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/ibtnLogout"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/ibtnOptions"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintVertical_bias="0.52" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/ibtnLogout"-->
+<!--            android:layout_width="70dp"-->
+<!--            android:layout_height="70dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:onClick="logoutClick"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:srcCompat="@drawable/logout"-->
+<!--            tools:ignore="SpeakableTextPresentCheck"-->
+<!--            tools:layout_editor_absoluteY="0dp" />-->
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/layoutMid"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="60dp"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/ivCorrect"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:srcCompat="@drawable/ic_launcher_background" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/ivWrong"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/ivTotal"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/ivCorrect"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:srcCompat="@drawable/ic_launcher_background" />-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/ivTotal"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:srcCompat="@drawable/ic_launcher_background" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/ibtnAddCard"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            tools:ignore="SpeakableTextPresentCheck"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/ivCorrect"-->
+<!--            app:srcCompat="@drawable/ic_launcher_foreground" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/ibtnDeleteCard"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            tools:ignore="SpeakableTextPresentCheck"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/ivTotal"-->
+<!--            app:srcCompat="@drawable/ic_launcher_foreground" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/ibtnUpdateCard"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            tools:ignore="SpeakableTextPresentCheck"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/ibtnDeleteCard"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/ibtnAddCard"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/ivWrong"-->
+<!--            app:srcCompat="@drawable/ic_launcher_foreground" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/ibtnAddCategory"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            tools:ignore="SpeakableTextPresentCheck"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/ibtnAddCard"-->
+<!--            app:srcCompat="@drawable/ic_launcher_foreground" />-->
+
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/ibtnDeleteCategory"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            tools:ignore="SpeakableTextPresentCheck"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/ibtnDeleteCard"-->
+<!--            app:srcCompat="@drawable/ic_launcher_foreground" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/imageButton9"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            tools:ignore="SpeakableTextPresentCheck"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/ibtnDeleteCategory"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/ibtnAddCategory"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/ibtnUpdateCard"-->
+<!--            app:srcCompat="@drawable/ic_launcher_foreground" />-->
+
+<!--        <ImageButton-->
+<!--            android:id="@+id/ibtnStart"-->
+<!--            android:layout_width="200dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            tools:ignore="SpeakableTextPresentCheck"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/imageButton9"-->
+<!--            app:srcCompat="@drawable/ic_launcher_foreground" />-->
+
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
